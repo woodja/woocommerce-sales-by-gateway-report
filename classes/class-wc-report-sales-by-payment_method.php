@@ -1,19 +1,19 @@
 <?php
 /**
- * WC_Report_Sales_By_Location
+ * WC_Report_Sales_By_Gateway
  *
- * @author      ChuckMac (chuck@chuckmac.info)
+ * @author      Jason Wood (jwood@immersionit.com)
  * @category    Admin
  * @package     WooCommerce/Admin/Reports
  * @version     1.1
  */
 
-class WC_Report_Sales_By_Location extends WC_Admin_Report {
+class WC_Report_Sales_By_Gateway extends WC_Admin_Report {
 
 	public $chart_colours = array();
 
-	public $location_data;
-	public $location_by;
+	public $gateway_data;
+	public $gateway_by;
 	public $totals_by;
 
 	private $report_data;
@@ -39,7 +39,7 @@ class WC_Report_Sales_By_Location extends WC_Admin_Report {
 
 		$this->report_data->orders = (array) $this->get_order_report_data( array(
 			'data' => array(
-				'_' . $this->location_by . '_country' => array(
+				'_' . $this->gateway_by . '_gateway' => array(
 					'type'     => 'meta',
 					'name'     => 'countries_data',
 					'function' => null
